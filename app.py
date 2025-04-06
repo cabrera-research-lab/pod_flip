@@ -29,7 +29,7 @@ prompt = st.text_area(
     height=150
 )
 
-if st.button("Suggest Episode"):
+if st.button("Suggest"):
     if prompt.strip():
         st.session_state.last_prompt = prompt.strip()
         with st.spinner("Finding the most relevant episode and generating your teaching material..."):
