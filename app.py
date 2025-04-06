@@ -50,19 +50,8 @@ if st.session_state.results:
             st.markdown(f"{result['student_question']}")
             st.markdown(f"{result['answer_key']}")
 
-    if st.button("🔁 Try another suggestion"):
+    if st.button("🔁 Try another"):
         with st.spinner("Fetching another alternative..."):
             new_result = generate_teaching_prompt(st.session_state.last_prompt)
-        st.session_state.results.append(new_result)
-        st.rerun()
-
-    if st.button("🎯 New video suggestion"):
-        with st.spinner("Finding an episode..."):
-            existing_urls = {r['url'] for r in st.session_state.results}
-            attempts = 0
-            new_result = generate_teaching_prompt(st.session_state.last_prompt)
-            while new_result['url'] in existing_urls and attempts < 5:
-                new_result = generate_teaching_prompt(st.session_state.last_prompt)
-                attempts += 1
         st.session_state.results.append(new_result)
         st.rerun()
