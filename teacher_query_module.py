@@ -49,7 +49,7 @@ def generate_teaching_prompt(prompt_text: str):
         '''
     )
 
-    llm = ChatOpenAI(model_name="gpt-4", temperature=0, openai_api_key=st.secrets["OPENAI_API_KEY"])
+    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key=st.secrets["OPENAI_API_KEY"])
     final_prompt = prompt.format(teacher_prompt=prompt_text, context=context)
     response = llm.invoke(final_prompt)
 
