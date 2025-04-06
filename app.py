@@ -9,7 +9,7 @@ theme = {
     "font": "sans serif"
 }
 
-st.set_page_config(page_title="Teach with Pod", layout="centered")
+st.set_page_config(page_title="Teach with PodFlip", layout="centered")
 
 col1, col2, col3 = st.columns([1, 1, 0.5])
 
