@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 .idea/
-.streamlit/
+.streamlit/secrets.toml
 
 # C extensions
 *.so
