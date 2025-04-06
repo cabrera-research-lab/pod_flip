@@ -16,7 +16,8 @@ col1, col2, col3 = st.columns([1, 1, 0.5])
 with col2:
     st.image("static/logo.png", width=100)
 
-st.title("Flip Your Classroom with Cabrera Lab Podcasts")
+st.title("PodFlip")
+st.markdown("Flip Your Classroom with Cabrera Lab Podcasts")
 
 if "last_prompt" not in st.session_state:
     st.session_state.last_prompt = ""
