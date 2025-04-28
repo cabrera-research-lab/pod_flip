@@ -25,7 +25,7 @@ if "results" not in st.session_state:
     st.session_state.results = []
 
 prompt = st.text_area(
-    "Provide a little information about your course: Name, Grade level, and topic of interest:",
+    "Provide a little information about your course: <b>[Name, Grade level, and topic of interest]</b>",
     height=150
 )
 
